@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 var extractPlugin = new ExtractTextPlugin({
-   filename: 'main.css'
+   filename: 'styles.css'
 });
 
 module.exports = {
@@ -12,7 +12,6 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
-        // publicPath: '/dist'
     },
     module: {
         rules: [
@@ -57,6 +56,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
+        //new ExtractTextPlugin('styles.css'),
         new CleanWebpackPlugin(['dist'])
     ]
 };
