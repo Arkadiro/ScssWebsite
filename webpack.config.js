@@ -33,6 +33,14 @@ module.exports = {
                 })
             },
             {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                use: [
+                         {
+                             loader: 'file-loader?name=./css/fonts/[name].[ext]'
+                         }
+                     ]
+            },
+            {
                 test: /\.html$/,
                 use: ['html-loader']
             },
