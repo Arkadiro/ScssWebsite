@@ -9,19 +9,20 @@
     height: 23rem;
     background-blend-mode: screen;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 
     &-1 {
       background-image: linear-gradient(to right bottom, $colorSecondaryLight, $colorSecondaryDark), url('../img/nat-5.jpg');
     }
 
     &-2 {
-      background-image: url('../img/nat-5.jpg');
+      background-image: linear-gradient(to right bottom, $colorPrimaryLight, $colorPrimaryDark), url('../img/nat-6.jpg');
     }
 
     &-3 {
-      background-image: url('../img/nat-5.jpg');
+      background-image: linear-gradient(to right bottom, $colorTertiaryLight, $colorTertiaryDark), url('../img/nat-7.jpg');
     }
-
   }
 
   &__heading {
@@ -33,7 +34,7 @@
     position: absolute;
     top: 12rem;
     right: 2rem;
-
+    width: 80%;
   }
 
   &__heading-span {
@@ -43,6 +44,14 @@
 
     &-1 {
       background-image: linear-gradient(to right bottom, rgba($colorSecondaryLight, .85), rgba($colorSecondaryDark, .85));
+    }
+
+    &-2 {
+      background-image: linear-gradient(to right bottom, rgba($colorPrimaryLight, .85), rgba($colorPrimaryDark, .85));
+    }
+
+    &-3 {
+      background-image: linear-gradient(to right bottom, rgba($colorTertiaryLight, .85), rgba($colorTertiaryDark, .85));
     }
   }
 
@@ -76,6 +85,7 @@
     width: 100%;
     backface-visibility: hidden;
     border-radius: 3px;
+    overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($colorBlack, .15);
 
     &--front {
@@ -87,10 +97,42 @@
       transform: rotateY(180deg);
 
       &-1 {
-        background-image: linear-gradient(to right bottom, $colorSecondaryLight, $colorSecondaryDark);
+        background-image: linear-gradient(to right bottom, rgba($colorSecondaryLight, .85), rgba($colorSecondaryDark, .85));
       }
-      
+  
+      &-2 {
+        background-image: linear-gradient(to right bottom, rgba($colorPrimaryLight, .85), rgba($colorPrimaryDark, .85));
+      }
+  
+      &-3 {
+        background-image: linear-gradient(to right bottom, rgba($colorTertiaryLight, .85), rgba($colorTertiaryDark, .85));
+      }
     }
+  }
+
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+  }
+
+  &__price-box {
+    text-align: center;
+    margin-bottom: 8rem;
+    color: $colorWhite;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
   }
 
   &:hover &__side--front {

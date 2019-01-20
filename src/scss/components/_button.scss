@@ -27,11 +27,20 @@
   }
 
   &--white {
-    background-color: #fff;
-    color: #777;
+    background-color: $colorWhite;
+    color: $colorGreyDark;
 
     &::after {
-      background-color: #fff;
+      background-color: $colorWhite;
+    }
+  }
+
+  &--green {
+    background-color: $colorPrimary;
+    color: $colorWhite;
+
+    &::after {
+      background-color: $colorPrimary;
     }
   }
 
